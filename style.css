@@ -1,0 +1,63 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    width: 500px;
+    margin: 0 auto;
+}
+
+#todo h1 {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    color: crimson;
+}
+
+#todo input[type="text"] {
+    margin: 5px auto;
+    width : 495px;
+    height : 40px;
+    font-size: 32px;
+}
+
+.todo-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.todo-list li {
+    position: relative;
+    margin: 0 0 5px;
+    padding: 5px 0 5px 15px;
+    font-size: 28px;
+    border-bottom: 1px solid #aaaaaa;
+}
+
+.todo-list input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.todo-list input[type="checkbox"]:checked + .todo-text {
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+
+.todo-trash {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    font-size: 16px;
+    color: darkred;
+    vertical-align: center;
+}
+
+.todo-list li:hover .todo-trash {
+    display: inline-block;
+}
+
+.todo-trash:hover {
+    cursor: pointer;
+}
