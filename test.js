@@ -33,8 +33,11 @@ function onPageLoaded() {
             let index = tasks.indexOf(element.parentElement);
             tasks.splice(index, 1);
             tasksStatus.splice(index, 1)
+            console.log(tasks);
+            console.log(tasksStatus);
             //element.parentElement.remove();
-            tasks.forEach((li) => {ul.append(li);})
+            $(ul).empty();
+            tasks.forEach((elem) => {ul.append(elem)});
         });
     }
 
