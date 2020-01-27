@@ -7,14 +7,14 @@ body {
     margin: 0 auto;
 }
 
-#todo h1 {
+#todos h1 {
     margin: 0;
     padding: 0;
     text-align: center;
     color: crimson;
 }
 
-#todo input[type="text"] {
+#todos .add-todo {
     margin: 5px auto;
     width : 495px;
     height : 40px;
@@ -23,16 +23,35 @@ body {
 
 .todo-list {
     list-style: none;
-    margin: 0;
+    margin: 0 0 10px;
     padding: 0;
 }
 
 .todo-list li {
     position: relative;
     margin: 0 0 5px;
-    padding: 5px 0 5px 15px;
+    padding: 5px 0;
     font-size: 28px;
     border-bottom: 1px solid #aaaaaa;
+}
+
+.todo-list .view {
+    position: relative;
+}
+.view.hidden {
+    visibility: hidden;
+}
+
+.todo-list .edit-todo {
+    position: absolute;
+    top: 5px;
+    width: 470px;
+    margin-left: 25px;
+    font-size: 22px;
+}
+
+.todo-list input.hidden {
+    display: none;
 }
 
 .todo-list input[type="checkbox"] {
@@ -60,4 +79,21 @@ body {
 
 .todo-trash:hover {
     cursor: pointer;
+}
+
+.pagination.hidden {
+    display: none;
+}
+
+.toolbar {
+    position: relative;
+    padding-top: 10px;
+    padding-left: 125px;
+}
+
+.counters {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
 }

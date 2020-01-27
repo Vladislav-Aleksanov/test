@@ -5,17 +5,45 @@
     <meta charset="utf-8">
 
     <!-- Подключаем Bootstrap CSS -->
-    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     
     <!-- Контент страницы -->
     <div class="container">
-        <div id="todo">
+        <div id="todos">
             <h1>my todos<i id="pencil" class="fas fa-pencil-alt"></i></h1>
-            <input type="text" placeholder="Add task">
-            <ul class="todo-list"></ul>
+            <input class="add-todo" type="text" placeholder="Add task">
+            <ul class="todo-list">
+                <!-- <li>
+                    <div class="view hidden">
+                        <input type="checkbox">
+                        <span class="todo-text">123</span>
+                        <span class="todo-trash">Delete</span>
+                    </div>
+                    <input class="edit-todo hidden" type="text" value="123">
+                </li> -->
+            </ul>
+
+            <nav aria-label="todo list">
+                <ul class="pagination justify-content-center">
+                    <li class="page-item"><a class="page-link" href="#">Back</a></li>
+                    <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                </ul>
+            </nav>
+
+            <div class="toolbar">
+                <button class="btn check-all-btn">Check all</button>
+                <button class="btn clear-completed-btn">Delete completed</button>
+                <button class="btn show-all-btn">All</button>
+                <button class="btn show-active-btn">Active</button>
+                <button class="btn show-completed-btn">Completed</button>
+                <div class="counters">
+                    <span class="active-tasks">Active: <b class="active-tasks-number"></b></span><br>
+                    <span class="completed-tasks">Completed: <b class="completed-tasks-number"></b></span class="active-tasks">
+                </div>
+            </div>
         </div>
     </div>
 
@@ -23,7 +51,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     
     <!-- Подключаем Bootstrap JS -->
-    <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous" ></script> -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous" ></script>
 
     <script src="test.js"></script>
 </body>
